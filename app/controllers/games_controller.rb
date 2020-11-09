@@ -12,12 +12,12 @@ class GamesController < ApplicationController
 
     if included?(@word, @letters)
       if english_word?(@word)
-        @response = "Well done! You spotted \"#{@word}\"!"
+        @response = "🥳 Well done! You spotted \"#{@word}\"!"
       else
-        @response = "Sorry but \"#{@word}\" isn't an English word."
+        @response = "🇬🇧 Sorry but \"#{@word}\" isn't an English word."
       end
     else
-      @response = "Sorry but \"#{@word}\" cannot be built out of #{@letters}."
+      @response = "🔎 Sorry but \"#{@word}\" cannot be built out of #{@letters}."
     end
   end
 
